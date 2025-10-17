@@ -19,7 +19,7 @@ A ready-to-use template containing everything you need to start developing your 
 - Your fork will be created in your GitHub account
 
 > [!NOTE]
-> A fork is required to create a pull request from your repository to the official [DAX Lib](https://github.com/daxlib/daxlib) repository. We recommend keeping the fork name as `daxlib` to simplify configuration. If you choose a different name, make sure to update the `DAXLIBFORK_NAME` variable in the workflow file `.github/workflows/publish-package.yml`.
+> A fork is required to create a pull request from your repository to the official [DAX Lib](https://github.com/daxlib/daxlib) repository. We recommend keeping the fork name as `daxlib` to simplify configuration. If you choose a different name, make sure to update the `DAXLIBFORK_NAME` variable in the workflow file `.github/workflows/publish-package.yml`. Do not operate on this fork. You can and should synchronize this fork before creating pull requests for your library to make sure you are working on the latest release of the code. This fork will add a new branch every time you create a pull request. These branches can be manually deleted after the pull request is approved. However, there are no negative side effects if you do not cancel these branches.
 
 ## ⚙️ Repository Setup
 
@@ -33,7 +33,7 @@ Follow these steps to configure your new repository:
   - **Description**: `Token for pushing changes to my DAX Lib fork` (or any description you prefer)
   - **Resource owner**: your GitHub account
   - **Expiration**: choose `No expiration` or set a date (remember to renew before expiry)
-  - **Repository access**: select `Only select repositories`, then chose your forked `daxlib` repository
+  - **Repository access**: select `Only select repositories`, then choose your forked `daxlib` repository
 - Set permissions:
   - Click `+ Add permissions`
   - Select `Contents`
@@ -73,6 +73,16 @@ Once your code is ready, you can publish a new version:
 > [!TIP]
 > You can iterate on your changes as many times as needed before the pull request is merged. Just keep the same library version in `manifest.daxlib`, and each workflow run will update the same pull request.
 ## 📚 Resources
+
+When the pull request is reviewed, comments and requests for changes may be made. In that case:
+  - Apply the requested fixes to the code
+  - Commit the files
+  - Go to the **Actions** tab
+  - Select the `publish-package`
+  - Click **Run workflow**, and confirm.
+  - The pull request will be automatically updated for a new review.
+
+After the pull request has been approved, the code is automatically published on [daxlib.org](https://daxlib.org/packages/), and the branch created on your fork of the daxlib repo can be removed. 
 
 - [DAX Lib documentation](https://docs.daxlib.org/)
 - [DAX Lib repository](https://github.com/daxlib/daxlib)
