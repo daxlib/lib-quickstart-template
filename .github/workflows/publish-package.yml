@@ -99,6 +99,14 @@ jobs:
       - name: Copy package files
         run: cp -rv source-repo/src/* "fork-repo/${{ steps.package.outputs.folder }}/"
 
+      # Replace the package ID and version placeholders in functions.tmdl
+      - name: Replace placeholders
+        working-directory: fork-repo
+        run: |
+          FUNCTIONS_FILE="${{ steps.package.outputs.folder }}/lib/functions.tmdl"
+          sed -i "s/__PLACEHOLDER_DAXLIB_PACKAGEID__/${{ steps.package.outputs.name }}/g" "${FUNCTIONS_FILE}"
+          sed -i "s/__PLACEHOLDER_DAXLIB_PACKAGEVERSION__/${{ steps.package.outputs.version }}/g" "${FUNCTIONS_FILE}"
+
       # Commit changes. If there are no changes, this will fail and stop the workflow
       - name: Git commit changes
         working-directory: fork-repo
