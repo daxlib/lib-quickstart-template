@@ -80,7 +80,7 @@ Your pull request will be reviewed by the DAX Lib maintainers and, if changes ar
 - Re-run the `publish-package` workflow
 - The pull request will be automatically updated
 
-Once yourpull request is approved and merged, your library will be automatically published on [daxlib.org](https://daxlib.org/).
+Once your pull request is approved and merged, your library will be automatically published on [daxlib.org](https://daxlib.org/).
 
 ## 📚 Resources
 
