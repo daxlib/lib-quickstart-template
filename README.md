@@ -7,11 +7,16 @@ A ready-to-use template containing everything you need to start developing your 
 ### 1. Create a New Repository from this Template
 
 - Click [![Use this template](https://img.shields.io/badge/Use%20this%20template-brightgreen?logo=github)](https://github.com/daxlib/lib-quickstart-template/generate) to create your new repository based on this template.
+- Enter a repository name that reflects the name of the library you want to develop.
+
+> [!TIP]
+> Need to develop more libraries? Simply reuse this template and generate a new repository for each one.
 
 ### 2. Fork the DAX Lib repository
 
+- If you already created a fork of the [DAX Lib](https://github.com/daxlib/daxlib) repository, you can skip this step.
 - Click [![Fork](https://img.shields.io/badge/Fork-brightgreen?logo=github)](https://github.com/daxlib/daxlib/fork) to create a fork of the official [DAX Lib](https://github.com/daxlib/daxlib) repository
-- The fork will be created in your GitHub account
+- Your fork will be created in your GitHub account
 
 > [!NOTE]
 > A fork is required to create a pull request from your repository to the official [DAX Lib](https://github.com/daxlib/daxlib) repository. We recommend keeping the fork name as `daxlib` to simplify configuration. If you choose a different name, make sure to update the `DAXLIBFORK_NAME` variable in the workflow file `.github/workflows/publish-package.yml`.
@@ -66,8 +71,7 @@ Once your code is ready, you can publish a new version:
 - If you make further changes, re-run the workflow to update the branch and the Pull Request automatically
 
 > [!TIP]
-> You can iterate on your changes as many times as needed before the pull request is merged. Just keep the version number constant, and each workflow run will update the same pull request.
-
+> You can iterate on your changes as many times as needed before the pull request is merged. Just keep the same library version in `manifest.daxlib`, and each workflow run will update the same pull request.
 ## 📚 Resources
 
 - [DAX Lib documentation](https://docs.daxlib.org/)
