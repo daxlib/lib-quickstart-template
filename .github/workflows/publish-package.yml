@@ -28,7 +28,8 @@ permissions:
   contents: read
 
 env:
-  # Name of the forked daxlib repository (change if your fork has a different name)
+  # Name of your fork of the DAX Lib repository. 
+  # Update `daxlib` if your fork has a different name.
   DAXLIBFORK_NAME: ${{ github.repository_owner }}/daxlib
 
 jobs:
