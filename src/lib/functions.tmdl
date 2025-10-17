@@ -1,9 +1,9 @@
 /// MyFunc1 description
 function 'Contoso.Sample.MyFunc1' = () => 1
 
-    annotation DAXLIB_PackageId = Contoso.Sample
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
 
-    annotation DAXLIB_PackageVersion = 0.1.0
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__
 
 /// MyFunc2 description
 function 'Contoso.Sample.MyFunc2' =
@@ -13,9 +13,9 @@ function 'Contoso.Sample.MyFunc2' =
         ) =>
             param1 * 2
 
-    annotation DAXLIB_PackageId = Contoso.Sample
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
 
-    annotation DAXLIB_PackageVersion = 0.1.0
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__
 
 /// MyFunc3 description
 function 'Contoso.Sample.MyFunc3' =
@@ -27,6 +27,6 @@ function 'Contoso.Sample.MyFunc3' =
         ) =>
             param1 + param2
 
-    annotation DAXLIB_PackageId = Contoso.Sample
+    annotation DAXLIB_PackageId = __PLACEHOLDER_PACKAGE_ID__
 
-    annotation DAXLIB_PackageVersion = 0.1.0
+    annotation DAXLIB_PackageVersion = __PLACEHOLDER_PACKAGE_VERSION__
